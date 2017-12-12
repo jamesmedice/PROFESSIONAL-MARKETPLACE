@@ -44,7 +44,7 @@
 		</dependency>
 
 		<dependency>
-			<groupId>model</groupId>
+			<groupId>PMP</groupId>
 			<artifactId>Market</artifactId>
 			<version>1.0</version>
 			<scope>provided</scope>
