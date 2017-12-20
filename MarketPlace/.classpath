@@ -9,12 +9,6 @@
 	<classpathentry excluding="**/*.java|**/application*.yml|**/application*.yaml|**/application*.properties" including="**/*.java" kind="src" path="src/main/resources"/>
 	<classpathentry kind="var" path="M2_REPO/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar" sourcepath="M2_REPO/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final-sources.jar"/>
 	<classpathentry kind="var" path="M2_REPO/com/sun/jersey/jersey-core/1.17/jersey-core-1.17.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-server/8.0.4.v20111024/jetty-server-8.0.4.v20111024.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/mortbay/jetty/servlet-api/3.0.20100224/servlet-api-3.0.20100224.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-continuation/9.4.2.v20170220/jetty-continuation-9.4.2.v20170220.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-http/9.4.2.v20170220/jetty-http-9.4.2.v20170220.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-util/9.4.2.v20170220/jetty-util-9.4.2.v20170220.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-io/9.4.2.v20170220/jetty-io-9.4.2.v20170220.jar"/>
 	<classpathentry kind="src" path="/Market"/>
 	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-core/4.3.7.RELEASE/spring-core-4.3.7.RELEASE.jar" sourcepath="M2_REPO/org/springframework/spring-core/4.3.7.RELEASE/spring-core-4.3.7.RELEASE-sources.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-context/4.3.7.RELEASE/spring-context-4.3.7.RELEASE.jar"/>
@@ -97,6 +91,12 @@
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
