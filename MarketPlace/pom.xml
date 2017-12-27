@@ -11,37 +11,24 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
+		<maven-war-plugin-version>3.2.0</maven-war-plugin-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.integration.version>4.3.8.RELEASE</spring.integration.version>
-		<commons.upload.version>1.3.1</commons.upload.version>
-		<junit.version>4.11</junit.version>
-		<log4j.version>1.7.24</log4j.version>
 		<java.version>1.8</java.version>
 		<spring-boot>1.5.2.RELEASE</spring-boot>
 		<jackson>2.8.5</jackson>
-		<jersey>1.17.1</jersey>
 		<start-class>com.it.gft.global.Application</start-class>
 	</properties>
 
 
 	<parent>
+		<relativePath>PMP:MarketPlace-Container</relativePath>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.2.RELEASE</version>
 	</parent>
 
 	<dependencies>
-
-		<dependency>
-			<groupId>org.jvnet.ws.wadl</groupId>
-			<artifactId>wadl-core</artifactId>
-			<version>1.1.6</version>
-		</dependency>
-		<dependency>
-			<groupId>org.jvnet.ws.wadl</groupId>
-			<artifactId>wadl-client-plugin</artifactId>
-			<version>1.1.6</version>
-		</dependency>
 
 		<dependency>
 			<groupId>PMP</groupId>
@@ -122,12 +109,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.apache.tomcat.embed</groupId>
-			<artifactId>tomcat-embed-jasper</artifactId>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
@@ -148,7 +129,20 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>3.2.0</version>
+				<version>${maven-war-plugin-version}</version>
+				<executions>
+					<execution>
+						<id>default-war</id>
+						<phase>package</phase>
+					</execution>
+					<execution>
+						<id>war-exploded</id>
+						<phase>package</phase>
+						<goals>
+							<goal>exploded</goal>
+						</goals>
+					</execution>
+				</executions>
 				<configuration>
 					<packagingExcludes>WEB-INF/lib/tomcat-*.jar</packagingExcludes>
 				</configuration>

@@ -1,5 +1,7 @@
 package com.it.gft.global.controllers;
 
+import java.security.Principal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.MediaType;
@@ -31,7 +33,7 @@ public class ProfileSerController {
     private ProfileGTW profileGTW;
 
     @RequestMapping(value = "{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Message<Profile> findProfile(@PathVariable Integer id) {
+    public Message<Profile> findProfile(@PathVariable Integer id, Principal principal) {
 	Profile profile = new Profile();
 	profile.setId(id);
 	Message<Profile> request = new GenericMessage<Profile>(profile);

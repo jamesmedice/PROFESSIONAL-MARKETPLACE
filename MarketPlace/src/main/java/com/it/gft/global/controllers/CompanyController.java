@@ -1,5 +1,6 @@
 package com.it.gft.global.controllers;
 
+import java.security.Principal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,31 +41,31 @@ public class CompanyController {
     private CompanyGTW companyGTW;
 
     @RequestMapping(path = "/all", method = RequestMethod.GET)
-    public GenericMessage<List<Company>> retrieveAllCompanies() {
+    public GenericMessage<List<Company>> retrieveAllCompanies(Principal principal) {
 	List<Company> companies = companyService.findAllCompanies();
 	return new GenericMessage<List<Company>>(companies);
     }
 
     @RequestMapping(path = "{id}", method = RequestMethod.GET)
-    public Message<Company> retrieveCompanyById(@PathVariable Integer id, @RequestHeader(ACCOUNT) String account) {
+    public Message<Company> retrieveCompanyById(@PathVariable Integer id, @RequestHeader(ACCOUNT) String account, Principal principal) {
 	Company payload = companyService.findById(id);
 	return new GenericMessage<Company>(payload);
     }
 
     @RequestMapping(path = "/entity", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Message<Company> retrieveCompany(@RequestBody Company payload, @RequestHeader(ACCOUNT) String account) {
+    public Message<Company> retrieveCompany(@RequestBody Company payload, @RequestHeader(ACCOUNT) String account, Principal principal) {
 	Message<Company> request = MessageBuilder.withPayload(payload).setHeader(ACCOUNT, account).build();
 	return companyGTW.companyById(request);
     }
 
     @RequestMapping(path = "/entityEx", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Message<Company> retrieveCompanyEx(@RequestBody Company payload, @RequestHeader(ACCOUNT) String account) {
+    public Message<Company> retrieveCompanyEx(@RequestBody Company payload, @RequestHeader(ACCOUNT) String account, Principal principal) {
 	Message<Company> request = MessageBuilder.withPayload(payload).setHeader(ACCOUNT, account).build();
 	return companyGTW.companyByExample(request);
     }
 
     @RequestMapping(path = "/entitySet", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Message<List<Company>> retrieveAllCompanies(@RequestBody StandardOrder payload, @RequestHeader(ACCOUNT) String account) {
+    public Message<List<Company>> retrieveAllCompanies(@RequestBody StandardOrder payload, @RequestHeader(ACCOUNT) String account, Principal principal) {
 	Message<StandardOrder> request = MessageBuilder.withPayload(payload).setHeader(ACCOUNT, account).build();
 	return companyGTW.findAllCompanies(request);
     }
