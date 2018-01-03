@@ -1,0 +1,44 @@
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>PMP</groupId>
+	<artifactId>MarketPlace-WADL</artifactId>
+	<version>1.0</version>
+
+
+	<name>MarketPlace-WADL</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<swagger.version>2.5.0</swagger.version>
+		<spring-boot.version>1.5.2.RELEASE</spring-boot.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+
+	<dependencies>
+
+		<!-- swagger dependencies -->
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger2</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>io.springfox</groupId>
+			<artifactId>springfox-swagger-ui</artifactId>
+			<version>${swagger.version}</version>
+		</dependency>
+
+		<!-- Create dummy Data -->
+		<dependency>
+			<groupId>org.jfairy</groupId>
+			<artifactId>jfairy</artifactId>
+			<version>0.3.0</version>
+		</dependency>
+	</dependencies>
+
+</project>

@@ -20,7 +20,7 @@ public class DateObjectSerializer extends StdSerializer<Date> {
 	this(Date.class);
     }
 
-    public static final String DATE_FORMAT = "yyyy-MM-dd |-| HH:mm:ss z";
+    public static final String DATE_FORMAT = "yyyyMMddHHmmss";
 
     @Override
     public void serialize(Date date, JsonGenerator arg1, SerializerProvider arg2) throws IOException {

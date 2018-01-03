@@ -21,6 +21,8 @@
 		<module>Market</module>
 		<module>MarketPlace</module>
 		<module>MarketPlace-Application</module>
+		<module>MarketPlace-SAAS</module>
+		<module>MarketPlace-WADL</module>
 	</modules>
 
 	<build>

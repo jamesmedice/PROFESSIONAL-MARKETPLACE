@@ -12,6 +12,11 @@ import com.it.gft.global.dao.AbstractDao;
 import com.it.gft.global.dao.ProfileDAO;
 import com.it.gft.global.model.Profile;
 
+/**
+ * 
+ * @author TOSS
+ *
+ */
 @Repository("profileDAO")
 public class ProfileDAOImpl extends AbstractDao implements ProfileDAO {
 
