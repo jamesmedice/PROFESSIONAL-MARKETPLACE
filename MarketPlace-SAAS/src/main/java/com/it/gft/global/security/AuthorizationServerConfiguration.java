@@ -4,13 +4,8 @@ import javax.sql.DataSource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.io.Resource;
-import org.springframework.jdbc.datasource.init.DataSourceInitializer;
-import org.springframework.jdbc.datasource.init.DatabasePopulator;
-import org.springframework.jdbc.datasource.init.ResourceDatabasePopulator;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
@@ -38,9 +33,6 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
     @Qualifier("authenticationManagerBean")
     private AuthenticationManager authenticationManager;
 
-    @Value("classpath:schema.sql")
-    private Resource schemaDataScript;
-
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
 	clients.jdbc(dataSource);
@@ -66,17 +58,4 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 	return new JdbcAuthorizationCodeServices(dataSource);
     }
 
-    @Bean
-    public DataSourceInitializer dataSourceInitializer(DataSource dataSource) {
-	DataSourceInitializer initializer = new DataSourceInitializer();
-	initializer.setDataSource(dataSource);
-	initializer.setDatabasePopulator(dataPopulator());
-	return initializer;
-    }
-
-    private DatabasePopulator dataPopulator() {
-	ResourceDatabasePopulator populator = new ResourceDatabasePopulator();
-	populator.addScript(schemaDataScript);
-	return populator;
-    }
 }
