@@ -18,6 +18,8 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.code.AuthorizationCodeServices;
+import org.springframework.security.oauth2.provider.code.JdbcAuthorizationCodeServices;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 
@@ -30,13 +32,7 @@ import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 @EnableAuthorizationServer
 public class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
 
-    private static final String OAUTH_PREFIX_URL = "t1/oauth";
-
-    @Autowired
-    private TokenStore tokenStore;
-
-    @Autowired
-    private Environment environment;
+    private static final String OAUTH_PREFIX_URL = "/t1/oauth";
 
     @Autowired
     private DataSource dataSource;
@@ -50,18 +46,22 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-
-	clients.jdbc(dataSource).withClient("sampleClientId").authorizedGrantTypes("implicit").scopes("read").autoApprove(true).and().withClient("clientIdPassword")
-		.authorizedGrantTypes("password", "headers", "authorization_code", "refresh_token", "implicit").scopes("read", "write", "trust").secret("secret")
-		.accessTokenValiditySeconds(1200).refreshTokenValiditySeconds(3600);
+	clients.jdbc(dataSource);
     }
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-	endpoints.tokenStore(tokenStore()).authenticationManager(authenticationManager).pathMapping("/oauth/token", OAUTH_PREFIX_URL + "/token")
-		.pathMapping("/oauth/authorize", OAUTH_PREFIX_URL + "/authorize").pathMapping("/oauth/check_token", OAUTH_PREFIX_URL + "/check_token")
-		.pathMapping("/oauth/confirm_access", OAUTH_PREFIX_URL + "confirm_access").pathMapping("/oauth/error", OAUTH_PREFIX_URL + "/error");
-
+	endpoints
+	.tokenStore(tokenStore())
+	.authenticationManager(authenticationManager)
+	.authorizationCodeServices(authorizationCodeServices())
+	.authenticationManager(this.authenticationManager)
+	.approvalStoreDisabled()
+	.pathMapping("/oauth/token", OAUTH_PREFIX_URL + "/token")
+	.pathMapping("/oauth/authorize", OAUTH_PREFIX_URL + "/authorize")
+	.pathMapping("/oauth/check_token", OAUTH_PREFIX_URL + "/check_token")
+	.pathMapping("/oauth/confirm_access", OAUTH_PREFIX_URL + "confirm_access")
+	.pathMapping("/oauth/error", OAUTH_PREFIX_URL + "/error");
     }
 
     @Override
@@ -72,6 +72,11 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
     @Bean
     public TokenStore tokenStore() {
 	return new JdbcTokenStore(dataSource);
+    }
+
+    @Bean
+    protected AuthorizationCodeServices authorizationCodeServices() {
+	return new JdbcAuthorizationCodeServices(dataSource);
     }
 
     @Bean
