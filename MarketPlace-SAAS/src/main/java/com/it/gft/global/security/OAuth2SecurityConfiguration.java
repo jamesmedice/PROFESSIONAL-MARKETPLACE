@@ -19,7 +19,7 @@ public class OAuth2SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-	http.authorizeRequests().antMatchers("/t1/oauth/**").permitAll().anyRequest().authenticated();
+	http.authorizeRequests().antMatchers("/oauth/**").permitAll().anyRequest().authenticated();
     }
 
     @Override

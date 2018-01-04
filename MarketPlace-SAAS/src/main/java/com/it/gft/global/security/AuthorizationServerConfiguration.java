@@ -7,7 +7,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.core.env.Environment;
 import org.springframework.core.io.Resource;
 import org.springframework.jdbc.datasource.init.DataSourceInitializer;
 import org.springframework.jdbc.datasource.init.DatabasePopulator;
@@ -51,17 +50,7 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-	endpoints
-	.tokenStore(tokenStore())
-	.authenticationManager(authenticationManager)
-	.authorizationCodeServices(authorizationCodeServices())
-	.authenticationManager(this.authenticationManager)
-	.approvalStoreDisabled()
-	.pathMapping("/oauth/token", OAUTH_PREFIX_URL + "/token")
-	.pathMapping("/oauth/authorize", OAUTH_PREFIX_URL + "/authorize")
-	.pathMapping("/oauth/check_token", OAUTH_PREFIX_URL + "/check_token")
-	.pathMapping("/oauth/confirm_access", OAUTH_PREFIX_URL + "confirm_access")
-	.pathMapping("/oauth/error", OAUTH_PREFIX_URL + "/error");
+	endpoints.tokenStore(tokenStore()).authenticationManager(authenticationManager).authorizationCodeServices(authorizationCodeServices());
     }
 
     @Override
