@@ -36,9 +36,13 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-	http.anonymous().and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.NEVER).and().authorizeRequests().antMatchers("/t1/oauth**").permitAll()
-		.antMatchers("/t1/public**").permitAll().antMatchers("/t1/private**").authenticated().antMatchers("/t1/protected**").authenticated().anyRequest().permitAll().and()
-		.authorizeRequests().antMatchers("/t1/env/**").access("hasRole('ADMIN')").and().exceptionHandling().accessDeniedHandler(new OAuth2AccessDeniedHandler());
+	http.anonymous().and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.NEVER)
+	.and().authorizeRequests()
+		.antMatchers("/t1/oauth**").permitAll()
+		.antMatchers("/t1/public**").permitAll()
+		.antMatchers("/t1/private**").authenticated() 
+		.antMatchers("/t1/protected**").authenticated().anyRequest().permitAll()
+	.and().authorizeRequests().antMatchers("/t1/env/**").access("hasRole('ADMIN')").and().exceptionHandling().accessDeniedHandler(new OAuth2AccessDeniedHandler());
     }
 
     @Bean
