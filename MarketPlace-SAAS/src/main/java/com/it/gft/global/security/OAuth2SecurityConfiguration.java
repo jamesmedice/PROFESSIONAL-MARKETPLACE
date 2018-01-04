@@ -2,6 +2,8 @@ package com.it.gft.global.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.Ordered;
+import org.springframework.core.annotation.Order;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
@@ -15,6 +17,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
  */
 @Configuration
 @EnableWebSecurity
+@Order(Ordered.LOWEST_PRECEDENCE - 6)
 public class OAuth2SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Override

@@ -31,8 +31,6 @@ import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 @EnableAuthorizationServer
 public class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
 
-    private static final String OAUTH_PREFIX_URL = "/t1/oauth";
-
     @Autowired
     private DataSource dataSource;
 
