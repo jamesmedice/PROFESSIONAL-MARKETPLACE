@@ -18,7 +18,6 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.A
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
-import org.springframework.security.oauth2.provider.approval.UserApprovalHandler;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 
@@ -35,9 +34,6 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 
     @Autowired
     private TokenStore tokenStore;
-
-    @Autowired
-    private UserApprovalHandler userApprovalHandler;
 
     @Autowired
     private Environment environment;
@@ -62,10 +58,9 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-	endpoints.tokenStore(tokenStore()).userApprovalHandler(userApprovalHandler).authenticationManager(authenticationManager)
-		.pathMapping("/oauth/token", OAUTH_PREFIX_URL + "/token").pathMapping("/oauth/authorize", OAUTH_PREFIX_URL + "/authorize")
-		.pathMapping("/oauth/check_token", OAUTH_PREFIX_URL + "/check_token").pathMapping("/oauth/confirm_access", OAUTH_PREFIX_URL + "confirm_access")
-		.pathMapping("/oauth/error", OAUTH_PREFIX_URL + "/error");
+	endpoints.tokenStore(tokenStore()).authenticationManager(authenticationManager).pathMapping("/oauth/token", OAUTH_PREFIX_URL + "/token")
+		.pathMapping("/oauth/authorize", OAUTH_PREFIX_URL + "/authorize").pathMapping("/oauth/check_token", OAUTH_PREFIX_URL + "/check_token")
+		.pathMapping("/oauth/confirm_access", OAUTH_PREFIX_URL + "confirm_access").pathMapping("/oauth/error", OAUTH_PREFIX_URL + "/error");
 
     }
 

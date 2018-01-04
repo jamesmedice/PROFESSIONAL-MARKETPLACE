@@ -33,12 +33,6 @@
 			<version>${swagger.version}</version>
 		</dependency>
 
-		<!-- Create dummy Data -->
-		<dependency>
-			<groupId>org.jfairy</groupId>
-			<artifactId>jfairy</artifactId>
-			<version>0.3.0</version>
-		</dependency>
 	</dependencies>
 
 </project>
