@@ -15,7 +15,6 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.integration.version>4.3.8.RELEASE</spring.integration.version>
 		<java.version>1.8</java.version>
-		<spring-boot>1.5.6.RELEASE</spring-boot>
 		<jackson>2.8.5</jackson>
 		<start-class>com.it.gft.global.Application</start-class>
 	</properties>
@@ -25,7 +24,7 @@
 		<relativePath>PMP:MarketPlace-Container</relativePath>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.2.RELEASE</version>
+		<version>1.5.6.RELEASE</version>
 	</parent>
 
 	<dependencies>
@@ -76,25 +75,7 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>${maven-war-plugin-version}</version>
-				<executions>
-					<execution>
-						<id>default-war</id>
-						<phase>package</phase>
-					</execution>
-					<execution>
-						<id>war-exploded</id>
-						<phase>package</phase>
-						<goals>
-							<goal>exploded</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<packagingExcludes>WEB-INF/lib/tomcat-*.jar</packagingExcludes>
-				</configuration>
 			</plugin>
 
 			<plugin>
@@ -110,5 +91,5 @@
 			</plugin>
 		</plugins>
 	</build>
- 
+
 </project>

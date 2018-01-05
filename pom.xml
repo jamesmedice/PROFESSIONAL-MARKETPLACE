@@ -28,7 +28,6 @@
 	<build>
 		<plugins>
 			<plugin>
-				<inherited>true</inherited>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven-compiler-plugin.version}</version>
@@ -42,19 +41,46 @@
 				<artifactId>maven-ear-plugin</artifactId>
 				<version>${maven-ear-plugin.version}</version>
 				<configuration>
-					<fileNameMapping>no-version</fileNameMapping>
 					<version>7</version>
-					<defaultLibBundleDir>lib</defaultLibBundleDir>
-					<libraryDirectoryMode>NONE</libraryDirectoryMode>
+					<modules>
+						<webModule>
+							<groupId>PMP</groupId>
+							<artifactId>MarketPlace</artifactId>
+							<contextRoot>/</contextRoot>
+						</webModule>
+					</modules>
 				</configuration>
+
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>${maven-war-plugin-version}</version>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
+
+	<profiles>
+		<profile>
+			<id>unpack</id>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.apache.maven.plugins</groupId>
+							<artifactId>maven-ear-plugin</artifactId>
+							<configuration>
+								<unpackTypes>war,jar</unpackTypes>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
 
 	<developers>
 		<developer>
