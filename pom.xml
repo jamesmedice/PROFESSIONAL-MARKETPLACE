@@ -12,9 +12,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven-ear-plugin.version>3.2.0</maven-ear-plugin.version>
+		<maven-ear-plugin.version>2.10.1</maven-ear-plugin.version>
 		<maven-war-plugin-version>3.2.0</maven-war-plugin-version>
-		<maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
+		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
 	</properties>
 
 	<modules>
@@ -50,7 +50,6 @@
 						</webModule>
 					</modules>
 				</configuration>
-
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -62,25 +61,6 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<profiles>
-		<profile>
-			<id>unpack</id>
-			<build>
-				<pluginManagement>
-					<plugins>
-						<plugin>
-							<groupId>org.apache.maven.plugins</groupId>
-							<artifactId>maven-ear-plugin</artifactId>
-							<configuration>
-								<unpackTypes>war,jar</unpackTypes>
-							</configuration>
-						</plugin>
-					</plugins>
-				</pluginManagement>
-			</build>
-		</profile>
-	</profiles>
 
 	<developers>
 		<developer>
