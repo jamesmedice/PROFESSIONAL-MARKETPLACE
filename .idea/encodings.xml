@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Market" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MarketPlace" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MarketPlace-Application" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MarketPlace-SAAS" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MarketPlace-WADL" charset="UTF-8" />
+  </component>
+</project>

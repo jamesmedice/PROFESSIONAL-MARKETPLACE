@@ -12,9 +12,9 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<maven-ear-plugin.version>2.10.1</maven-ear-plugin.version>
+		<maven-ear-plugin.version>2.10</maven-ear-plugin.version>
 		<maven-war-plugin-version>3.2.0</maven-war-plugin-version>
-		<maven-compiler-plugin.version>3.7.0</maven-compiler-plugin.version>
+		<maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
 	</properties>
 
 	<modules>
@@ -41,23 +41,16 @@
 				<artifactId>maven-ear-plugin</artifactId>
 				<version>${maven-ear-plugin.version}</version>
 				<configuration>
+					<fileNameMapping>no-version</fileNameMapping>
 					<version>7</version>
-					<modules>
-						<webModule>
-							<groupId>PMP</groupId>
-							<artifactId>MarketPlace</artifactId>
-							<contextRoot>/</contextRoot>
-						</webModule>
-					</modules>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+					<libraryDirectoryMode>NONE</libraryDirectoryMode>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>${maven-war-plugin-version}</version>
-				<configuration>
-					<failOnMissingWebXml>false</failOnMissingWebXml>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>

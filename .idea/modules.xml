@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Market/Market.iml" filepath="$PROJECT_DIR$/Market/Market.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MarketPlace/MarketPlace.iml" filepath="$PROJECT_DIR$/MarketPlace/MarketPlace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MarketPlace-Application/MarketPlace-Application.iml" filepath="$PROJECT_DIR$/MarketPlace-Application/MarketPlace-Application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MarketPlace-Container.iml" filepath="$PROJECT_DIR$/MarketPlace-Container.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MarketPlace-SAAS/MarketPlace-SAAS.iml" filepath="$PROJECT_DIR$/MarketPlace-SAAS/MarketPlace-SAAS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MarketPlace-WADL/MarketPlace-WADL.iml" filepath="$PROJECT_DIR$/MarketPlace-WADL/MarketPlace-WADL.iml" />
+    </modules>
+  </component>
+</project>

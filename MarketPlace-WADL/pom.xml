@@ -6,6 +6,7 @@
 	<groupId>PMP</groupId>
 	<artifactId>MarketPlace-WADL</artifactId>
 	<version>1.0</version>
+	<packaging>jar</packaging>
 
 
 	<name>MarketPlace-WADL</name>

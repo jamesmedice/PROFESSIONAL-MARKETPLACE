@@ -69,13 +69,31 @@
 			<version>${jackson}</version>
 		</dependency>
 
-	</dependencies>
 
+	</dependencies>
 
 	<build>
 		<plugins>
 			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
+				<version>${maven-war-plugin-version}</version>
+				<executions>
+					<execution>
+						<id>default-war</id>
+						<phase>package</phase>
+					</execution>
+					<execution>
+						<id>war-exploded</id>
+						<phase>package</phase>
+						<goals>
+							<goal>exploded</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<packagingExcludes>WEB-INF/lib/tomcat-*.jar</packagingExcludes>
+				</configuration>
 			</plugin>
 
 			<plugin>
