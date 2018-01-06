@@ -22,7 +22,7 @@ import com.it.gft.global.service.ProfileService;
  *
  */
 @RestController
-@RequestMapping(path = "/profile")
+@RequestMapping(path = BaseProtectedApi.PREFIX_PROTECTED + "/profile")
 public class ProfileSerController {
 
     @Autowired(required = true)

@@ -27,7 +27,7 @@ import com.it.gft.global.service.CompanyService;
  */
 
 @RestController
-@RequestMapping(path = "/company")
+@RequestMapping(path = BaseProtectedApi.PREFIX_PROTECTED + "/company")
 public class CompanyController {
 
     @Autowired(required = true)

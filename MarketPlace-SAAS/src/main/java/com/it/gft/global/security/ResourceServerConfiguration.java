@@ -30,9 +30,7 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
 	 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.NEVER)
          .and().authorizeRequests()
          	.antMatchers(HttpMethod.OPTIONS).permitAll()
-		.antMatchers("/t1/oauth**").permitAll()
-		.antMatchers("/t1/public**").permitAll()
-		.antMatchers("/t1/private**").authenticated() 
-		.antMatchers("/t1/protected**").authenticated().anyRequest().permitAll();
+		.antMatchers("/t1/oauth/**").permitAll()
+		.antMatchers("/t1/protected/**").authenticated();
     }
 }

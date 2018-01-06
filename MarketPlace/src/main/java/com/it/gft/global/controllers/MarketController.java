@@ -16,7 +16,7 @@ import com.it.gft.global.message.gateway.MarketGTW;
 import com.it.gft.global.model.Market;
 
 @RestController
-@RequestMapping(path = "/market")
+@RequestMapping(path = BaseProtectedApi.PREFIX_PROTECTED + "/market")
 public class MarketController {
 
     @Autowired
