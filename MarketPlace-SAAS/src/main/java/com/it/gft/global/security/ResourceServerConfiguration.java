@@ -1,9 +1,7 @@
 package com.it.gft.global.security;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.ResourceServerSecurityConfigurer;
@@ -26,11 +24,6 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
-	 http.anonymous()
-	 .and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.NEVER)
-         .and().authorizeRequests()
-         	.antMatchers(HttpMethod.OPTIONS).permitAll()
-		.antMatchers("/t1/oauth/**").permitAll()
-		.antMatchers("/t1/protected/**").authenticated();
+	http.authorizeRequests().antMatchers("/oauth/**").permitAll().antMatchers("/protected/**").authenticated();
     }
 }
