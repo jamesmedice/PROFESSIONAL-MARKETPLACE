@@ -28,14 +28,14 @@
 	</parent>
 
 	<dependencies>
-
+	
 		<dependency>
 			<groupId>PMP</groupId>
 			<artifactId>Market</artifactId>
 			<version>1.0</version>
 			<scope>provided</scope>
 		</dependency>
-
+		
 		<dependency>
 			<groupId>PMP</groupId>
 			<artifactId>MarketPlace-SAAS</artifactId>

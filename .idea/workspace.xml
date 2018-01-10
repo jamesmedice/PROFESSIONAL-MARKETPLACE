@@ -3,24 +3,24 @@
   <component name="ChangeListManager">
     <list default="true" id="7cc3022d-c3c0-4a54-8189-c77c32314000" name="Default" comment="">
       <change type="DELETED" beforePath="C:\Users\toss\dev\MarketPlace-Container\MarketPlace-Application\.classpath" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Market/.classpath" afterPath="$PROJECT_DIR$/Market/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace/.classpath" afterPath="$PROJECT_DIR$/MarketPlace/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace-SAAS/.classpath" afterPath="$PROJECT_DIR$/MarketPlace-SAAS/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace-WADL/.classpath" afterPath="$PROJECT_DIR$/MarketPlace-WADL/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Market/.project" afterPath="$PROJECT_DIR$/Market/.project" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace/.project" afterPath="$PROJECT_DIR$/MarketPlace/.project" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace-Application/.project" afterPath="$PROJECT_DIR$/MarketPlace-Application/.project" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace-SAAS/.project" afterPath="$PROJECT_DIR$/MarketPlace-SAAS/.project" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace-WADL/.project" afterPath="$PROJECT_DIR$/MarketPlace-WADL/.project" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace-WADL/src/main/java/com/it/gft/global/wadl/config/SwaggerConfigurer.java" afterPath="$PROJECT_DIR$/MarketPlace-WADL/src/main/java/com/it/gft/global/wadl/config/SwaggerConfigurer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace/src/main/java/com/it/gft/global/WebConfiguration.java" afterPath="$PROJECT_DIR$/MarketPlace/src/main/java/com/it/gft/global/WebConfiguration.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/MarketPlace/src/main/resources/application.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace/pom.xml" afterPath="$PROJECT_DIR$/MarketPlace/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace-Application/pom.xml" afterPath="$PROJECT_DIR$/MarketPlace-Application/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace-WADL/pom.xml" afterPath="$PROJECT_DIR$/MarketPlace-WADL/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace/.classpath" afterPath="$PROJECT_DIR$/MarketPlace/.classpath" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace/src/main/java/com/it/gft/global/WebConfiguration.java" afterPath="$PROJECT_DIR$/MarketPlace/src/main/java/com/it/gft/global/WebConfiguration.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.classpath" afterPath="$PROJECT_DIR$/.classpath" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace-Application/.project" afterPath="$PROJECT_DIR$/MarketPlace-Application/.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace/pom.xml" afterPath="$PROJECT_DIR$/MarketPlace/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace/.project" afterPath="$PROJECT_DIR$/MarketPlace/.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace-SAAS/.project" afterPath="$PROJECT_DIR$/MarketPlace-SAAS/.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" afterPath="$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/MarketPlace/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Market/.project" afterPath="$PROJECT_DIR$/Market/.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace-WADL/.project" afterPath="$PROJECT_DIR$/MarketPlace-WADL/.project" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace-WADL/.classpath" afterPath="$PROJECT_DIR$/MarketPlace-WADL/.classpath" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace-SAAS/.classpath" afterPath="$PROJECT_DIR$/MarketPlace-SAAS/.classpath" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Market/.classpath" afterPath="$PROJECT_DIR$/Market/.classpath" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MarketPlace-Application/pom.xml" afterPath="$PROJECT_DIR$/MarketPlace-Application/pom.xml" />
     </list>
     <ignored path="MarketPlace-Container.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,8 +53,8 @@
       <file leaf-file-name="Application.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MarketPlace/src/main/java/com/it/gft/global/Application.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7234042" vertical-offset="0" max-vertical-offset="517">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.3137255" vertical-offset="0" max-vertical-offset="867">
+              <caret line="22" column="88" selection-start-line="22" selection-start-column="88" selection-end-line="22" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -65,10 +65,17 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/MarketPlace/src/main/java/com/it/gft/global/Application.java" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
-    <option name="width" value="1924" />
+    <option name="width" value="1938" />
     <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -368,33 +375,33 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1924" height="1050" extended-state="0" />
+    <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3888889" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24784483" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24598931" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3888889" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -424,8 +431,16 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/MarketPlace/src/main/java/com/it/gft/global/Application.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7234042" vertical-offset="0" max-vertical-offset="517">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MarketPlace/src/main/java/com/it/gft/global/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3137255" vertical-offset="0" max-vertical-offset="867">
+          <caret line="22" column="88" selection-start-line="22" selection-start-column="88" selection-end-line="22" selection-end-column="88" />
           <folding />
         </state>
       </provider>

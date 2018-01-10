@@ -12,20 +12,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.it.gft.global.message.gateway.MarketGTW;
-import com.it.gft.global.model.Market;
+import com.it.gft.global.message.gateway.EmployeeGTW;
+import com.it.gft.global.model.Employee;
 
 @RestController
-@RequestMapping(path = BaseProtectedApi.PREFIX_PROTECTED + "/employee")
-public class MarketController {
+@RequestMapping(path = BaseProtectedApi.PREFIX_PROTECTED + "/market")
+public class EmployeeController {
 
     @Autowired
-    private MarketGTW marketGTW;
+    private EmployeeGTW employeeGTW;
 
     @RequestMapping(value = "/ids", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Message<List<Market>> findClients(@RequestBody List<String> ids, Principal principal) {
+    public Message<List<Employee>> findClients(@RequestBody List<String> ids, Principal principal) {
 	Message<List<String>> request = new GenericMessage<List<String>>(ids);
-	return marketGTW.findClients(request);
+	return employeeGTW.findEmployees(request);
     }
 
 }

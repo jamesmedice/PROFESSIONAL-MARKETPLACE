@@ -16,6 +16,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -53,6 +54,11 @@ public class Employee extends BaseEmployee implements Serializable {
     private Date initDate;
 
     private int level;
+
+    @Transient
+    public Long getId() {
+	return Long.valueOf(this.employee_id);
+    }
 
     public String getProfile_name() {
 	return profile_name;
