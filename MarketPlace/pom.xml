@@ -45,6 +45,13 @@
 
 		<dependency>
 			<groupId>PMP</groupId>
+			<artifactId>MarketPlace-SAOP</artifactId>
+			<version>1.0</version>
+			<type>jar</type>
+		</dependency>
+
+		<dependency>
+			<groupId>PMP</groupId>
 			<artifactId>MarketPlace-WADL</artifactId>
 			<version>1.0</version>
 			<type>jar</type>
