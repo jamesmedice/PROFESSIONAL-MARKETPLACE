@@ -72,3 +72,10 @@ CREATE TABLE if
   additionalInformation VARCHAR(4096),
   autoApproveScopes VARCHAR(255)
 );
+
+DROP TABLE IF EXISTS auth_details;
+CREATE TABLE auth_details (
+  username varchar(256),
+  password varchar(256),
+  PRIMARY KEY (username)
+) ENGINE=InnoDB ;
