@@ -18,11 +18,11 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<!-- AspectJ -->
 		<aspectj.version>1.7.4</aspectj.version>
-		<spring.framework.version>5.0.0.RELEASE</spring.framework.version>
+		<spring.framework.version>4.3.5.RELEASE</spring.framework.version>
 	</properties>
 
 	<dependencies>
-
+ 
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>

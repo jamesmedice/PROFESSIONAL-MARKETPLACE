@@ -6,6 +6,7 @@
   <projects>
     <project>Market</project>
     <project>MarketPlace-SAAS</project>
+    <project>MarketPlace-SAOP</project>
     <project>MarketPlace-WADL</project>
   </projects>
   <buildSpec>
