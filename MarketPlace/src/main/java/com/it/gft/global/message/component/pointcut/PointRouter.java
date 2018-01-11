@@ -10,6 +10,11 @@ import org.springframework.messaging.MessageChannel;
 
 import com.it.gft.global.messages.StandardSet;
 
+/**
+ * 
+ * @author TOSS
+ *
+ */
 @MessageEndpoint
 public class PointRouter {
 
@@ -24,7 +29,7 @@ public class PointRouter {
 	router.setApplySequence(true);
 	router.setIgnoreSendFailures(true);
 	router.setDefaultOutputChannel(pointOutChannel());
-	router.addRecipient("projectChannel" , "payload.parents");
+	router.addRecipient("projectChannel", "payload.parents");
 	router.addRecipient("profileChannel", "payload.childs");
 	return router;
     }
