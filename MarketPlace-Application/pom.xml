@@ -12,8 +12,15 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven-ear-plugin.version>2.10</maven-ear-plugin.version>
 	</properties>
-		
+
+	<parent>
+		<groupId>PMP</groupId>
+		<version>1.0</version>
+		<artifactId>MarketPlace-Container</artifactId>
+	</parent>
+
 	<dependencies>
 		<dependency>
 			<groupId>PMP</groupId>
@@ -22,4 +29,25 @@
 			<type>war</type>
 		</dependency>
 	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>${maven-ear-plugin.version}</version>
+				<configuration>
+					<fileNameMapping>no-version</fileNameMapping>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+					<libraryDirectoryMode>NONE</libraryDirectoryMode>
+					<modules>
+						<webModule>
+							<groupId>PMP</groupId>
+							<artifactId>MarketPlace</artifactId>
+						</webModule>
+					</modules>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>

@@ -27,6 +27,7 @@
         <module name="MarketPlace" />
         <module name="MarketPlace-Application" />
         <module name="MarketPlace-SAAS" />
+        <module name="MarketPlace-SAOP" />
         <module name="MarketPlace-WADL" />
       </profile>
     </annotationProcessing>

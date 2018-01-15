@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @author MEDICI
  *
  */
-@ComponentScan(basePackages = { "com.it.gft.global.security", "com.it.gft.global" })
+@ComponentScan(basePackages = { "com.it.gft.global" })
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer {
 

@@ -16,7 +16,7 @@
 		<spring.version>5.0.0.RELEASE</spring.version>
 		<spring-boot.version>1.5.6.RELEASE</spring-boot.version>
 		<security.oauth2>2.2.1.RELEASE</security.oauth2>
-		<spring.message.int>4.3.7.RELEASE</spring.message.int>
+		<spring.message.int>4.3.8.RELEASE</spring.message.int>
 		<spring.framework.version>4.3.5.RELEASE</spring.framework.version>
 	</properties>
 
@@ -36,6 +36,11 @@
 			<version>${spring-boot.version}</version>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-jdbc</artifactId>
+			<version>${spring-boot.version}</version>
+		</dependency>
 
 		<!-- jdbc -->
 		<dependency>
@@ -44,6 +49,18 @@
 			<version>${spring.framework.version}</version>
 		</dependency>
 
+		<!-- spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.framework.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>commons-logging</groupId>
+					<artifactId>commons-logging</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 
 		<!-- security -->
 
@@ -88,7 +105,6 @@
 			<artifactId>spring-integration-test</artifactId>
 			<version>${spring.message.int}</version>
 		</dependency>
-
 
 	</dependencies>
 

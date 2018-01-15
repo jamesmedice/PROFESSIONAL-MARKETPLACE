@@ -19,7 +19,7 @@ import com.it.gft.global.model.Market;
 @RequestMapping(path = BaseProtectedApi.PREFIX_PROTECTED + "/employee")
 public class MarketController {
 
-    @Autowired
+    @Autowired(required = true)
     private MarketGTW marketGTW;
 
     @RequestMapping(value = "/ids", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)

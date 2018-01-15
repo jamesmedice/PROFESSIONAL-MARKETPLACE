@@ -20,6 +20,13 @@
 		<maven-compiler-plugin.version>3.5.1</maven-compiler-plugin.version>
 	</properties>
 
+	<parent>
+		<relativePath></relativePath>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.6.RELEASE</version>
+	</parent>
+
 	<modules>
 		<module>Market</module>
 		<module>MarketPlace</module>
@@ -42,20 +49,11 @@
 				</configuration>
 			</plugin>
 			<plugin>
-				<artifactId>maven-ear-plugin</artifactId>
-				<version>${maven-ear-plugin.version}</version>
-				<configuration>
-					<fileNameMapping>no-version</fileNameMapping>
-					<version>7</version>
-					<defaultLibBundleDir>lib</defaultLibBundleDir>
-					<libraryDirectoryMode>NONE</libraryDirectoryMode>
-				</configuration>
-			</plugin>
-			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<version>${maven-war-plugin-version}</version>
 			</plugin>
+
 		</plugins>
 	</build>
 

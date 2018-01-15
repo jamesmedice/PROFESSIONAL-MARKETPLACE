@@ -61,7 +61,6 @@ INSERT INTO oauth_client_details (client_id,
              36000,
              NULL,
              TRUE);
-              alter
               
               
 INSERT INTO auth_details

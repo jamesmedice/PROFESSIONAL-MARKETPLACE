@@ -19,23 +19,21 @@
 		<start-class>com.it.gft.global.Application</start-class>
 	</properties>
 
-
 	<parent>
-		<relativePath>PMP:MarketPlace-Container</relativePath>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.6.RELEASE</version>
+		<groupId>PMP</groupId>
+		<version>1.0</version>
+		<artifactId>MarketPlace-Container</artifactId>
 	</parent>
 
 	<dependencies>
-	
+
 		<dependency>
 			<groupId>PMP</groupId>
 			<artifactId>Market</artifactId>
 			<version>1.0</version>
 			<scope>provided</scope>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>PMP</groupId>
 			<artifactId>MarketPlace-SAAS</artifactId>
@@ -82,28 +80,6 @@
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>${maven-war-plugin-version}</version>
-				<executions>
-					<execution>
-						<id>default-war</id>
-						<phase>package</phase>
-					</execution>
-					<execution>
-						<id>war-exploded</id>
-						<phase>package</phase>
-						<goals>
-							<goal>exploded</goal>
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<packagingExcludes>WEB-INF/lib/tomcat-*.jar</packagingExcludes>
-				</configuration>
-			</plugin>
-
-			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<executions>
@@ -111,8 +87,15 @@
 						<goals>
 							<goal>repackage</goal>
 						</goals>
+						<configuration>
+							<skip>true</skip>
+						</configuration>
 					</execution>
 				</executions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>

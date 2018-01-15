@@ -26,7 +26,7 @@ public interface PointStandGTW {
 	return new QueueChannel();
     }
 
-    @Gateway(requestChannel = "standInput", replyChannel = "standOutput")
-    GenericMessage<Map<String, Object>> defaultRequest(@Payload Message<StandardSet> request);
+//    @Gateway(requestChannel = "standInput", replyChannel = "standOutput")
+//    GenericMessage<Map<String, Object>> defaultRequest(@Payload Message<StandardSet> request);
 
 }

@@ -13,6 +13,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @author TOSS
  *
  */
+
 @EnableSwagger2
 public class SwaggerConfigurer {
 

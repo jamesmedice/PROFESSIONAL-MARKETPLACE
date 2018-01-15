@@ -34,7 +34,7 @@ public class CompanyController {
     @Qualifier("companyService")
     private CompanyService companyService;
 
-    @Autowired
+    @Autowired(required = true)
     private CompanyGTW companyGTW;
 
     @RequestMapping(path = "/all", method = RequestMethod.GET)

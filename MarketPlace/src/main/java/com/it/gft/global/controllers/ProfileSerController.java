@@ -29,7 +29,7 @@ public class ProfileSerController {
     @Qualifier("profileService")
     private ProfileService profileService;
 
-    @Autowired
+    @Autowired(required = true)
     private ProfileGTW profileGTW;
 
     @RequestMapping(value = "{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
