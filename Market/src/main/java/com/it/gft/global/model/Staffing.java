@@ -29,7 +29,7 @@ public class Staffing implements Serializable {
     private String corporateArea;
 
     @JsonIgnore
-    @JoinColumn(name = "staff_id", referencedColumnName = "staff_id")
+    @JoinColumn(name = "staff_id", referencedColumnName = "staff_id", nullable = true)
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Employee> employees;
 

@@ -1,4 +1,4 @@
-package com.it.gft.global.model;
+package com.it.gft.global.app;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
@@ -6,6 +6,18 @@ import java.lang.reflect.Type;
 import java.lang.reflect.TypeVariable;
 import java.math.BigDecimal;
 import java.util.Date;
+
+import com.it.gft.global.model.Ambassor;
+import com.it.gft.global.model.Branch;
+import com.it.gft.global.model.Company;
+import com.it.gft.global.model.Currency;
+import com.it.gft.global.model.Director;
+import com.it.gft.global.model.Employee;
+import com.it.gft.global.model.Market;
+import com.it.gft.global.model.ProfessionalSkills;
+import com.it.gft.global.model.Profile;
+import com.it.gft.global.model.Project;
+import com.it.gft.global.model.Staffing;
 
 public abstract class EntityProvider {
 

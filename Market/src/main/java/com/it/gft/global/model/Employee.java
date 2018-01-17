@@ -43,7 +43,7 @@ public class Employee extends BaseEmployee implements Serializable {
     private Set<ProfessionalSkills> skills;
 
     @JsonIgnore
-    @JoinColumn(name = "project_id", referencedColumnName = "project_id")
+    @JoinColumn(name = "project_id", referencedColumnName = "project_id", nullable = true)
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Project> projects;
 
