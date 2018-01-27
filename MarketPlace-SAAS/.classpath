@@ -39,9 +39,7 @@
 	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE.jar" sourcepath="M2_REPO/org/springframework/spring-web/4.3.10.RELEASE/spring-web-4.3.10.RELEASE-sources.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-webmvc/4.3.10.RELEASE/spring-webmvc-4.3.10.RELEASE.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/springframework/security/oauth/spring-security-oauth2/2.2.1.RELEASE/spring-security-oauth2-2.2.1.RELEASE.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/springframework/security/spring-security-core/3.2.10.RELEASE/spring-security-core-3.2.10.RELEASE.jar"/>
 	<classpathentry kind="var" path="M2_REPO/aopalliance/aopalliance/1.0/aopalliance-1.0.jar"/>
-	<classpathentry kind="var" path="M2_REPO/commons-codec/commons-codec/1.9/commons-codec-1.9.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/codehaus/jackson/jackson-mapper-asl/1.9.13/jackson-mapper-asl-1.9.13.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/codehaus/jackson/jackson-core-asl/1.9.13/jackson-core-asl-1.9.13.jar"/>
 	<classpathentry kind="var" path="M2_REPO/junit/junit/4.12/junit-4.12.jar"/>

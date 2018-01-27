@@ -102,7 +102,6 @@
 	<classpathentry kind="var" path="M2_REPO/org/mapstruct/mapstruct/1.1.0.Final/mapstruct-1.1.0.Final.jar"/>
 	<classpathentry kind="var" path="M2_REPO/io/springfox/springfox-swagger-ui/2.7.0/springfox-swagger-ui-2.7.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/springframework/retry/spring-retry/1.2.1.RELEASE/spring-retry-1.2.1.RELEASE.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/reactivestreams/reactive-streams/1.0.0/reactive-streams-1.0.0.jar"/>
 	<classpathentry kind="var" path="M2_REPO/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.8.5/jackson-module-jaxb-annotations-2.8.5.jar"/>
 	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
 		<attributes>
