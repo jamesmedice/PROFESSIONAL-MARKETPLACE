@@ -14,9 +14,9 @@ import javax.servlet.http.HttpServletRequestWrapper;
  * @author TOSS
  *
  */
-public class HeaderMapRequestWrapper extends HttpServletRequestWrapper {
+public class WebHeaderMapRequestWrapper extends HttpServletRequestWrapper {
 
-    public HeaderMapRequestWrapper(HttpServletRequest request) {
+    public WebHeaderMapRequestWrapper(HttpServletRequest request) {
 	super(request);
     }
 

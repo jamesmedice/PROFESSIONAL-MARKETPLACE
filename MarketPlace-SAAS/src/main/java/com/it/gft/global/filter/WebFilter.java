@@ -48,7 +48,7 @@ public class WebFilter implements Filter, FilterApiProvider {
 
 	if (CONDITION == true) {
 	    HttpServletRequest req = (HttpServletRequest) request;
-	    HeaderMapRequestWrapper requestWrapper = new HeaderMapRequestWrapper(req);
+	    WebHeaderMapRequestWrapper requestWrapper = new WebHeaderMapRequestWrapper(req);
 	    String remote_addr = request.getRemoteAddr();
 	    requestWrapper.addHeader("remote_addr", remote_addr);
 	    chain.doFilter(requestWrapper, res);
