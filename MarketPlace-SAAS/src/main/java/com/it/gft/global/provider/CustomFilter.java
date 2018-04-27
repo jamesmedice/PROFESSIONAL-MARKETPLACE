@@ -23,6 +23,7 @@ import org.springframework.security.web.authentication.AbstractAuthenticationPro
 public class CustomFilter extends AbstractAuthenticationProcessingFilter {
 
     public OAuth2RestOperations restTemplate;
+    
     private UserInfoTokenServicesFork tokenServices;
 
     public CustomFilter(String defaultFilterProcessesUrl) {

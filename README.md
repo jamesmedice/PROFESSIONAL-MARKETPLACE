@@ -1,6 +1,6 @@
 Synopsis
 
-This prject stands for integration spring framework with modules of boot, integration, cache, security , hateoas.
+This prject stands for integration spring framework with modules of boot, integration, cache, security , hateoas, oath2.
 
 
 

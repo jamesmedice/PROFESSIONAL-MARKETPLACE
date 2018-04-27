@@ -12,12 +12,7 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="var" path="M2_REPO/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-starter-web/1.5.6.RELEASE/spring-boot-starter-web-1.5.6.RELEASE.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-starter/1.5.6.RELEASE/spring-boot-starter-1.5.6.RELEASE.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot/1.5.6.RELEASE/spring-boot-1.5.6.RELEASE.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/springframework/spring-aop/4.3.10.RELEASE/spring-aop-4.3.10.RELEASE.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-autoconfigure/1.5.6.RELEASE/spring-boot-autoconfigure-1.5.6.RELEASE.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-starter-logging/1.5.6.RELEASE/spring-boot-starter-logging-1.5.6.RELEASE.jar"/>
 	<classpathentry kind="var" path="M2_REPO/ch/qos/logback/logback-classic/1.1.11/logback-classic-1.1.11.jar"/>
 	<classpathentry kind="var" path="M2_REPO/ch/qos/logback/logback-core/1.1.11/logback-core-1.1.11.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.22/slf4j-api-1.7.22.jar"/>
@@ -25,7 +20,6 @@
 	<classpathentry kind="var" path="M2_REPO/org/slf4j/jul-to-slf4j/1.7.25/jul-to-slf4j-1.7.25.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/slf4j/log4j-over-slf4j/1.7.25/log4j-over-slf4j-1.7.25.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/yaml/snakeyaml/1.17/snakeyaml-1.17.jar"/>
-	<classpathentry kind="var" path="M2_REPO/org/springframework/boot/spring-boot-starter-tomcat/1.5.6.RELEASE/spring-boot-starter-tomcat-1.5.6.RELEASE.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/apache/tomcat/embed/tomcat-embed-core/8.5.16/tomcat-embed-core-8.5.16.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/apache/tomcat/embed/tomcat-embed-el/8.5.16/tomcat-embed-el-8.5.16.jar"/>
 	<classpathentry kind="var" path="M2_REPO/org/apache/tomcat/embed/tomcat-embed-websocket/8.5.16/tomcat-embed-websocket-8.5.16.jar"/>
