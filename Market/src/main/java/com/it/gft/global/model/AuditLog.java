@@ -15,7 +15,10 @@ import javax.persistence.TemporalType;
 @Table(name = "AUDIT_LOG")
 public class AuditLog implements java.io.Serializable {
 
-    private Long auditLogId;
+  
+	private static final long serialVersionUID = 1152555741224304950L;
+	
+	private Long auditLogId;
     private String action;
     private String detail;
     private Date createdDate;

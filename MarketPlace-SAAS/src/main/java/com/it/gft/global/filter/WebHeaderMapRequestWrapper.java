@@ -16,43 +16,43 @@ import javax.servlet.http.HttpServletRequestWrapper;
  */
 public class WebHeaderMapRequestWrapper extends HttpServletRequestWrapper {
 
-    public WebHeaderMapRequestWrapper(HttpServletRequest request) {
-	super(request);
-    }
+	public WebHeaderMapRequestWrapper(HttpServletRequest request) {
+		super(request);
+	}
 
-    private Map<String, String> headerMap = new HashMap<String, String>();
+	private Map<String, String> headerMap = new HashMap<>();
 
-    public void addHeader(String name, String value) {
-	headerMap.put(name, value);
-    }
+	public void addHeader(String name, String value) {
+		headerMap.put(name, value);
+	}
 
-    @Override
-    public String getHeader(String name) {
-	String headerValue = super.getHeader(name);
+	@Override
+	public String getHeader(String name) {
+		String headerValue = super.getHeader(name);
 
-	if (headerMap.containsKey(name))
-	    headerValue = headerMap.get(name);
+		if (headerMap.containsKey(name))
+			headerValue = headerMap.get(name);
 
-	return headerValue;
-    }
+		return headerValue;
+	}
 
-    @Override
-    public Enumeration<String> getHeaderNames() {
-	List<String> names = Collections.list(super.getHeaderNames());
+	@Override
+	public Enumeration<String> getHeaderNames() {
+		List<String> names = Collections.list(super.getHeaderNames());
 
-	for (String name : headerMap.keySet())
-	    names.add(name);
+		for (String name : headerMap.keySet())
+			names.add(name);
 
-	return Collections.enumeration(names);
-    }
+		return Collections.enumeration(names);
+	}
 
-    @Override
-    public Enumeration<String> getHeaders(String name) {
-	List<String> values = Collections.list(super.getHeaders(name));
+	@Override
+	public Enumeration<String> getHeaders(String name) {
+		List<String> values = Collections.list(super.getHeaders(name));
 
-	if (headerMap.containsKey(name))
-	    values.add(headerMap.get(name));
+		if (headerMap.containsKey(name))
+			values.add(headerMap.get(name));
 
-	return Collections.enumeration(values);
-    }
+		return Collections.enumeration(values);
+	}
 }

@@ -49,7 +49,7 @@ public class ProfessionalSkills implements Serializable {
 
     public Set<Employee> getEmployees() {
 	if (employees == null)
-	    employees = new HashSet<Employee>();
+	    employees = new HashSet<>();
 
 	return employees;
     }

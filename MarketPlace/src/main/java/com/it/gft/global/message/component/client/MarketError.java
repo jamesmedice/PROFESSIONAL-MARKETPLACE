@@ -18,16 +18,16 @@ import com.it.gft.global.model.Market;
 @MessageEndpoint
 public class MarketError {
 
-    private static final String MISSING_REQUIRED_FIELDS = "Missing required fields_:";
+	private static final String MISSING_REQUIRED_FIELDS = "Missing required fields_:";
 
-    @Bean(name = "errorChannel")
-    public MessageChannel errorChannel() {
-	return new DirectChannel();
-    }
+	@Bean(name = "errorChannel")
+	public MessageChannel errorChannel() {
+		return new DirectChannel();
+	}
 
-    @ServiceActivator(inputChannel = "errorClientChannel")
-    public Message<?> displayErrorMessage(Message<Market> request) {
-	return MessageBuilder.withPayload(MISSING_REQUIRED_FIELDS + request.getPayload().toString()).build();
-    }
+	@ServiceActivator(inputChannel = "errorClientChannel")
+	public Message<?> displayErrorMessage(Message<Market> request) {
+		return MessageBuilder.withPayload(MISSING_REQUIRED_FIELDS + request.getPayload().toString()).build();
+	}
 
 }

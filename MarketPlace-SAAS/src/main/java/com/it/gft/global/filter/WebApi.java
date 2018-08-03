@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.it.gft.global.filter.provider.*;
+import com.it.gft.global.filter.provider.API_RESPONSE;
+import com.it.gft.global.filter.provider.ApiProvider;
 
 /**
  * 
@@ -19,23 +20,23 @@ import com.it.gft.global.filter.provider.*;
  */
 @RestController
 @RequestMapping("/surifire")
-public class WebApi implements ApiProvider {
+public class WebApi extends ApiProvider {
 
-    private static final Logger logger = LoggerFactory.getLogger(WebApi.class);
+	private static final Logger logger = LoggerFactory.getLogger(WebApi.class);
 
-    @RequestMapping(method = RequestMethod.GET)
-    public @ResponseBody ResponseEntity<Object> doSomething(@RequestHeader(name = "remote_addr") String remoteAddress) {
-	
-	logger.debug(THE_REMOTE_ADDRESS_ADDED_BY_WEB_FILER_IS, remoteAddress);
-	
-	ResponseEntity<Object> response = null;
-	try {
-	    response = new ResponseEntity<Object>(API_RESPONSE.SUCCESS.name(), HttpStatus.OK);
-	} catch (Exception ex) {
-	    logger.error(ex.getMessage(), ex);
-	    return new ResponseEntity<Object>(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+	@RequestMapping(method = RequestMethod.GET)
+	public @ResponseBody ResponseEntity<Object> doSomething(@RequestHeader(name = "remote_addr") String remoteAddress) {
+
+		logger.debug(THE_REMOTE_ADDRESS_ADDED_BY_WEB_FILER_IS, remoteAddress);
+
+		ResponseEntity<Object> response = null;
+		try {
+			response = new ResponseEntity<Object>(API_RESPONSE.SUCCESS.name(), HttpStatus.OK);
+		} catch (Exception ex) {
+			logger.error(ex.getMessage(), ex);
+			return new ResponseEntity<Object>(ex.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
+		}
+
+		return response;
 	}
-	
-	return response;
-    }
 }

@@ -19,27 +19,27 @@ import com.it.gft.global.model.Market;
 @MessageEndpoint
 public class MarketSplitter {
 
-    @Bean(name = "clientSplitterInput")
-    public MessageChannel clientSplitterInput() {
-	return new DirectChannel();
-    }
-
-    @Bean(name = "clientSplitterOutput")
-    public MessageChannel clientSplitterOutput() {
-	return new DirectChannel();
-    }
-
-    @Splitter(inputChannel = "clientSplitterInput", outputChannel = "clientSplitterOutput")
-    public List<Market> createRequests(List<String> request) {
-	List<Market> response = new ArrayList<Market>();
-
-	for (String item : request) {
-	    Market client = new Market();
-	    client.setId(Integer.parseInt(item));
-	    response.add(client);
+	@Bean(name = "clientSplitterInput")
+	public MessageChannel clientSplitterInput() {
+		return new DirectChannel();
 	}
 
-	return response;
-    }
+	@Bean(name = "clientSplitterOutput")
+	public MessageChannel clientSplitterOutput() {
+		return new DirectChannel();
+	}
+
+	@Splitter(inputChannel = "clientSplitterInput", outputChannel = "clientSplitterOutput")
+	public List<Market> createRequests(List<String> request) {
+		List<Market> response = new ArrayList<>();
+
+		for (String item : request) {
+			Market client = new Market();
+			client.setId(Integer.parseInt(item));
+			response.add(client);
+		}
+
+		return response;
+	}
 
 }
