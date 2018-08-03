@@ -1,6 +1,6 @@
 package com.it.gft.global.filter.provider;
 
-public interface FilterApiProvider {
+public abstract class FilterApiProvider {
 
     public static final String DESTROYING_WEB_FILTER = "Destroying WebFilter >> ";
 
