@@ -18,18 +18,18 @@ import com.it.gft.global.service.impl.OauthClientServiceImpl;
 @ComponentScan(basePackages = { "com.it.gft.global.dao", "com.it.gft.global.model" })
 public class AppConfig {
 
-    @Bean(autowire = Autowire.BY_NAME, name = "companyService")
-    public CompanyService companyService() {
-	return new CompanyServiceImpl();
-    }
+	@Bean(autowire = Autowire.BY_NAME, name = "companyService")
+	public CompanyService companyService() {
+		return new CompanyServiceImpl();
+	}
 
-    @Bean(autowire = Autowire.BY_NAME, name = "filterEventService")
-    public FilterEventService filterEventService() {
-	return new FilterEventServiceImpl();
-    }
+	@Bean(autowire = Autowire.BY_NAME, name = "filterEventService")
+	public FilterEventService filterEventService() {
+		return new FilterEventServiceImpl();
+	}
 
-    @Bean(autowire = Autowire.BY_NAME, name = "oauthClientService")
-    public OauthClientService oauthClientService() {
-	return new OauthClientServiceImpl();
-    }
+	@Bean(autowire = Autowire.BY_NAME, name = "oauthClientService")
+	public OauthClientService oauthClientService() {
+		return new OauthClientServiceImpl();
+	}
 }
