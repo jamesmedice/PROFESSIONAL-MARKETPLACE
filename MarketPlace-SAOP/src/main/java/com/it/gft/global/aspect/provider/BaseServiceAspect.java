@@ -8,15 +8,15 @@ import org.aspectj.lang.annotation.Before;
 
 public abstract class BaseServiceAspect {
 
-    Log LOGGER = LogFactory.getLog(this.getClass());
+    Log LOGGING = LogFactory.getLog(this.getClass());
 
     @Before("com.it.gft.global.aspect.provider.CompanyPointcutDefinition.serviceLayer()")
     public void MethodExecution(JoinPoint joinPoint) {
-	LOGGER.info("Executing Servcice: " + joinPoint.getSignature().getName());
+	LOGGING.info("Executing Servcice: " + joinPoint.getSignature().getName());
     }
 
     @After("com.it.gft.global.aspect.provider.CompanyPointcutDefinition.serviceLayer()")
     public void logAfter(JoinPoint joinPoint) {
-	LOGGER.info("Finished Execution Servcice Method: " + joinPoint.getSignature().getName());
+	LOGGING.info("Finished Execution Servcice Method: " + joinPoint.getSignature().getName());
     }
 }

@@ -20,14 +20,14 @@ public class CompanyAspect extends BaseServiceAspect {
 
 	@AfterReturning(pointcut = "execution(* com.it.gft.global.service.CompanyService.findById(..))", returning = "result")
 	public void logAfterReturning(JoinPoint joinPoint, Object result) {
-		LOGGER.info("Servcice Method: " + joinPoint.getSignature().getName());
-		LOGGER.info("Result: " + result);
+		LOGGING.info("Servcice Method: " + joinPoint.getSignature().getName());
+		LOGGING.info("Result: " + result);
 	}
 
 	@Around("execution(* com.it.gft.global.service.CompanyService.findById(..))")
 	public void logAround(ProceedingJoinPoint joinPoint) throws Throwable {
-		LOGGER.info("Servcice Method: " + joinPoint.getSignature().getName());
-		LOGGER.info("Servcice Arguments: " + Arrays.toString(joinPoint.getArgs()));
+		LOGGING.info("Servcice Method: " + joinPoint.getSignature().getName());
+		LOGGING.info("Servcice Arguments: " + Arrays.toString(joinPoint.getArgs()));
 
 		joinPoint.proceed();
 	}
