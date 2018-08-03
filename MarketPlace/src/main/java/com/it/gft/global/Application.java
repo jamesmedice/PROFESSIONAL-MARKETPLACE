@@ -10,6 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
 
 /**
  * 
+ * @author a73s
  * @author MEDICI
  *
  */
