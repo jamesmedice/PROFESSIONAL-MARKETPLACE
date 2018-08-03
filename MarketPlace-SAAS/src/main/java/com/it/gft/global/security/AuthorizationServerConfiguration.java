@@ -28,45 +28,45 @@ import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 @EnableAuthorizationServer
 public class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
 
-    @Autowired
-    private DataSource dataSource;
+	@Autowired
+	private DataSource dataSource;
 
-    @Autowired
-    @Qualifier("authenticationManagerBean")
-    private AuthenticationManager authenticationManager;
+	@Autowired
+	@Qualifier("authenticationManagerBean")
+	private AuthenticationManager authenticationManager;
 
-    @Autowired
-    private CustomUserDetailsService userDetailsService;
+	@Autowired
+	private CustomUserDetailsService userDetailsService;
 
-    @Autowired
-    public void authenticationManager(AuthenticationManagerBuilder builder) throws Exception {
-	builder.userDetailsService(userDetailsService);
-    }
+	@Autowired
+	public void authenticationManager(AuthenticationManagerBuilder builder) throws Throwable {
+		builder.userDetailsService(userDetailsService);
+	}
 
-    @Override
-    public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
-	clients.jdbc(dataSource);
-    }
+	@Override
+	public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+		clients.jdbc(dataSource);
+	}
 
-    @Override
-    public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-	endpoints.tokenStore(tokenStore()).allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST).authenticationManager(authenticationManager)
-		.authorizationCodeServices(authorizationCodeServices()).tokenEnhancer(new CustomTokenEnhancer());
-    }
+	@Override
+	public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
+		endpoints.tokenStore(tokenStore()).allowedTokenEndpointRequestMethods(HttpMethod.GET, HttpMethod.POST).authenticationManager(authenticationManager).authorizationCodeServices(authorizationCodeServices())
+				.tokenEnhancer(new CustomTokenEnhancer());
+	}
 
-    @Override
-    public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
-	oauthServer.tokenKeyAccess("permitAll()").checkTokenAccess("isAuthenticated()").allowFormAuthenticationForClients();
-    }
+	@Override
+	public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
+		oauthServer.tokenKeyAccess("permitAll()").checkTokenAccess("isAuthenticated()").allowFormAuthenticationForClients();
+	}
 
-    @Bean
-    public TokenStore tokenStore() {
-	return new JdbcTokenStore(dataSource);
-    }
+	@Bean
+	public TokenStore tokenStore() {
+		return new JdbcTokenStore(dataSource);
+	}
 
-    @Bean
-    protected AuthorizationCodeServices authorizationCodeServices() {
-	return new JdbcAuthorizationCodeServices(dataSource);
-    }
+	@Bean
+	protected AuthorizationCodeServices authorizationCodeServices() {
+		return new JdbcAuthorizationCodeServices(dataSource);
+	}
 
 }
