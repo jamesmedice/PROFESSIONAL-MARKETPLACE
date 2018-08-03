@@ -1,7 +1,5 @@
 package com.it.gft.global.controllers;
 
-import java.security.Principal;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.MediaType;
@@ -25,18 +23,18 @@ import com.it.gft.global.service.ProfileService;
 @RequestMapping(path = BaseProtectedApi.PREFIX_PROTECTED + "/profile")
 public class ProfileSerController {
 
-    @Autowired(required = true)
-    @Qualifier("profileService")
-    private ProfileService profileService;
+	@Autowired(required = true)
+	@Qualifier("profileService")
+	private ProfileService profileService;
 
-    @Autowired(required = true)
-    private ProfileGTW profileGTW;
+	@Autowired(required = true)
+	private ProfileGTW profileGTW;
 
-    @RequestMapping(value = "{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
-    public Message<Profile> findProfile(@PathVariable Integer id, Principal principal) {
-	Profile profile = new Profile();
-	profile.setId(id);
-	Message<Profile> request = new GenericMessage<Profile>(profile);
-	return profileGTW.findProfile(request);
-    }
+	@RequestMapping(value = "{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+	public Message<Profile> findProfile(@PathVariable Integer id) {
+		Profile profile = new Profile();
+		profile.setId(id);
+		Message<Profile> request = new GenericMessage<Profile>(profile);
+		return profileGTW.findProfile(request);
+	}
 }
