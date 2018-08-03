@@ -19,16 +19,16 @@ import org.springframework.context.annotation.ComponentScan;
 @ConfigurationProperties(value = "classpath:application.yaml")
 public class Application extends SpringBootServletInitializer {
 
-    public Application() {
-	super();
-    }
+	public Application() {
+		super();
+	}
 
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-	return application.sources(Application.class);
-    }
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(Application.class);
+	}
 
-    public static void main(String[] args) {
-	SpringApplication.run(Application.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(Application.class, args);//NOSONAR
+	}
 }
