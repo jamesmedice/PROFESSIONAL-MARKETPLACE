@@ -34,7 +34,7 @@ public class JsonUtils {
 	return mapper;
     }
 
-    public static String serializeAsJsonString(Object object) throws JsonGenerationException, JsonMappingException, IOException {
+	public static String serializeAsJsonString(Object object) throws JsonGenerationException, JsonMappingException, IOException {
 	ObjectMapper mapper = objectMapper();
 	mapper.enable(SerializationFeature.INDENT_OUTPUT);
 	mapper.disable(SerializationFeature.FAIL_ON_EMPTY_BEANS);
@@ -43,7 +43,7 @@ public class JsonUtils {
 	return sw.toString();
     }
 
-    public static String serializeAsJsonString(Object object, boolean indent) throws JsonGenerationException, JsonMappingException, IOException {
+    public static String serializeAsJsonStringIndent(Object object, boolean indent) throws JsonGenerationException, JsonMappingException, IOException {
 	ObjectMapper mapper = objectMapper();
 	if (indent == true) {
 	    mapper.enable(SerializationFeature.INDENT_OUTPUT);
@@ -70,7 +70,7 @@ public class JsonUtils {
 	return obj;
     }
 
-    public static <T> T jsonStringToObjectArray(String content, Class<T> clazz) throws JsonParseException, JsonMappingException, IOException {
+    public static <T> T jsonStringToObjectClassArray(String content, Class<T> clazz) throws JsonParseException, JsonMappingException, IOException {
 	T obj = null;
 	ObjectMapper mapper = objectMapper();
 	obj = mapper.readValue(content, mapper.getTypeFactory().constructCollectionType(List.class, clazz));
