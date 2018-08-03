@@ -1,6 +1,5 @@
 package com.it.gft.global.controllers;
 
-import java.security.Principal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +22,7 @@ public class MarketController {
     private MarketGTW marketGTW;
 
     @RequestMapping(value = "/ids", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Message<List<Market>> findClients(@RequestBody List<String> ids, Principal principal) {
+    public Message<List<Market>> findClients(@RequestBody List<String> ids) {
 	Message<List<String>> request = new GenericMessage<List<String>>(ids);
 	return marketGTW.findClients(request);
     }

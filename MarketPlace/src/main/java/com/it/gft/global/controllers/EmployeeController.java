@@ -1,6 +1,5 @@
 package com.it.gft.global.controllers;
 
-import java.security.Principal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,13 +18,13 @@ import com.it.gft.global.model.Employee;
 @RequestMapping(path = BaseProtectedApi.PREFIX_PROTECTED + "/market")
 public class EmployeeController {
 
-    @Autowired(required = true)
-    private EmployeeGTW employeeGTW;
+	@Autowired(required = true)
+	private EmployeeGTW employeeGTW;
 
-    @RequestMapping(value = "/ids", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public Message<List<Employee>> findClients(@RequestBody List<String> ids, Principal principal) {
-	Message<List<String>> request = new GenericMessage<List<String>>(ids);
-	return employeeGTW.findEmployees(request);
-    }
+	@RequestMapping(value = "/ids", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public Message<List<Employee>> findClients(@RequestBody List<String> ids) {
+		Message<List<String>> request = new GenericMessage<List<String>>(ids);
+		return employeeGTW.findEmployees(request);
+	}
 
 }
