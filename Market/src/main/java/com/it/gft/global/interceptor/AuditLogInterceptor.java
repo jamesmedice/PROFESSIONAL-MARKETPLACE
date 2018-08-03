@@ -17,7 +17,7 @@ import com.it.gft.global.log.model.IAuditLog;
 
 public class AuditLogInterceptor extends EmptyInterceptor {
     
-    Log LOGGER = LogFactory.getLog(AuditLogInterceptor.class);
+	private final transient Log LOGGER = LogFactory.getLog(AuditLogInterceptor.class);
 
     private static final String SAVED = "Saved";
 
