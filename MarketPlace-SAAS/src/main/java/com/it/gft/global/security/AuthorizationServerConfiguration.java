@@ -2,6 +2,8 @@ package com.it.gft.global.security;
 
 import javax.sql.DataSource;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
@@ -28,6 +30,8 @@ import org.springframework.security.oauth2.provider.token.store.JdbcTokenStore;
 @EnableAuthorizationServer
 public class AuthorizationServerConfiguration extends AuthorizationServerConfigurerAdapter {
 
+	private final transient Log LOGGER = LogFactory.getLog(AuthorizationServerConfiguration.class);
+
 	@Autowired
 	private DataSource dataSource;
 
@@ -39,8 +43,12 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 	private CustomUserDetailsService userDetailsService;
 
 	@Autowired
-	public void authenticationManager(AuthenticationManagerBuilder builder) throws Throwable {
-		builder.userDetailsService(userDetailsService);
+	public void authenticationManager(AuthenticationManagerBuilder builder) {
+		try {
+			builder.userDetailsService(userDetailsService);
+		} catch (Exception e) {
+			LOGGER.error(e);
+		}
 	}
 
 	@Override
