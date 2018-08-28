@@ -24,110 +24,100 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 @Table(name = "GFT_EMPLOYEE")
 public class Employee extends BaseEmployee implements Serializable {
 
-    private static final long serialVersionUID = 20251502L;
+	private static final long serialVersionUID = 20251502L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int employee_id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int employee_id;
 
-    private Currency currency;
+	private Currency currency;
 
-    private boolean available_travel = true;
+	private boolean available_travel = true;
 
-    @JoinColumn(name = "profile_id", referencedColumnName = "profile_id", nullable = false)
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Profile profile;
+	@JoinColumn(name = "profile_id", referencedColumnName = "profile_id", nullable = false)
+	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private Profile profile;
 
-    @JoinColumn(name = "skill_id", referencedColumnName = "skill_id")
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Set<ProfessionalSkills> skills;
+	@JoinColumn(name = "skill_id", referencedColumnName = "skill_id")
+	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private Set<ProfessionalSkills> skills;
 
-    @JsonIgnore
-    @JoinColumn(name = "project_id", referencedColumnName = "project_id", nullable = true)
-    @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Set<Project> projects;
+	@JsonIgnore
+	@JoinColumn(name = "project_id", referencedColumnName = "project_id", nullable = true)
+	@ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private Set<Project> projects;
 
-    private String profile_name;
+	private BigDecimal salary;
 
-    private BigDecimal salary;
+	private Date initDate;
 
-    private Date initDate;
+	private int level;
 
-    private int level;
+	@Transient
+	public Long getId() {
+		return Long.valueOf(this.employee_id);
+	}
 
-    @Transient
-    public Long getId() {
-	return Long.valueOf(this.employee_id);
-    }
+	public BigDecimal getSalary() {
+		return salary;
+	}
 
-    public String getProfile_name() {
-	return profile_name;
-    }
+	public Date getInitDate() {
+		return initDate;
+	}
 
-    public BigDecimal getSalary() {
-	return salary;
-    }
+	public void setSalary(BigDecimal salary) {
+		this.salary = salary;
+	}
 
-    public Date getInitDate() {
-	return initDate;
-    }
+	public void setInitDate(Date initDate) {
+		this.initDate = initDate;
+	}
 
-    public void setProfile_name(String profile_name) {
-	this.profile_name = profile_name;
-    }
+	public int getLevel() {
+		return level;
+	}
 
-    public void setSalary(BigDecimal salary) {
-	this.salary = salary;
-    }
+	public void setLevel(int level) {
+		this.level = level;
+	}
 
-    public void setInitDate(Date initDate) {
-	this.initDate = initDate;
-    }
+	public Currency getCurrency() {
+		return currency;
+	}
 
-    public int getLevel() {
-	return level;
-    }
+	public void setCurrency(Currency currency) {
+		this.currency = currency;
+	}
 
-    public void setLevel(int level) {
-	this.level = level;
-    }
+	public Profile getProfile() {
+		return profile;
+	}
 
-    public Currency getCurrency() {
-	return currency;
-    }
+	public void setProfile(Profile profile) {
+		this.profile = profile;
+	}
 
-    public void setCurrency(Currency currency) {
-	this.currency = currency;
-    }
+	public Set<Project> getProjects() {
+		if (projects == null)
+			projects = new HashSet<Project>();
 
-    public Profile getProfile() {
-	return profile;
-    }
+		return projects;
+	}
 
-    public void setProfile(Profile profile) {
-	this.profile = profile;
-    }
+	public Set<ProfessionalSkills> getSkills() {
+		if (skills == null)
+			skills = new HashSet<ProfessionalSkills>();
 
-    public Set<Project> getProjects() {
-	if (projects == null)
-	    projects = new HashSet<Project>();
+		return skills;
+	}
 
-	return projects;
-    }
+	public boolean isAvailable_travel() {
+		return available_travel;
+	}
 
-    public Set<ProfessionalSkills> getSkills() {
-	if (skills == null)
-	    skills = new HashSet<ProfessionalSkills>();
-
-	return skills;
-    }
-
-    public boolean isAvailable_travel() {
-	return available_travel;
-    }
-
-    public void setAvailable_travel(boolean available_travel) {
-	this.available_travel = available_travel;
-    }
+	public void setAvailable_travel(boolean available_travel) {
+		this.available_travel = available_travel;
+	}
 
 }
