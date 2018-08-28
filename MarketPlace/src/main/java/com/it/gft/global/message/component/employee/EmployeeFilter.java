@@ -9,29 +9,19 @@ import org.springframework.integration.channel.DirectChannel;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageChannel;
 
+import com.it.gft.global.message.component.client.BaseFilter;
+
 @MessageEndpoint
-public class EmployeeFilter {
+public class EmployeeFilter extends BaseFilter {
 
-    @Bean(name = "employeeSetInput")
-    public MessageChannel employeeSetInput() {
-	return new DirectChannel();
-    }
-
-    @Filter(inputChannel = "employeeSetInput", outputChannel = "employeeSplitterInput", discardChannel = "errorEmployeeChannel", throwExceptionOnRejection = "true")
-    public Boolean verify(Message<List<String>> request) {
-	Boolean allInteger = true;
-
-	for (String item : request.getPayload()) {
-
-	    try {
-		Integer.parseInt(item);
-	    } catch (NumberFormatException e) {
-		allInteger = false;
-		break;
-	    }
+	@Bean(name = "employeeSetInput")
+	public MessageChannel employeeSetInput() {
+		return new DirectChannel();
 	}
 
-	return allInteger;
-    }
+	@Filter(inputChannel = "employeeSetInput", outputChannel = "employeeSplitterInput", discardChannel = "errorEmployeeChannel", throwExceptionOnRejection = "true")
+	public Boolean verify(Message<List<String>> request) {
+		return baseFilterRequest(request);
+	}
 
 }

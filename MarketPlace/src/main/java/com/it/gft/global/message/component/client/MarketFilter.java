@@ -10,28 +10,16 @@ import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageChannel;
 
 @MessageEndpoint
-public class MarketFilter {
+public class MarketFilter extends BaseFilter {
 
-    @Bean(name = "clientSetInput")
-    public MessageChannel clientSetInput() {
-	return new DirectChannel();
-    }
-
-    @Filter(inputChannel = "clientSetInput", outputChannel = "clientSplitterInput", discardChannel = "errorClientChannel", throwExceptionOnRejection = "true")
-    public Boolean verify(Message<List<String>> request) {
-	Boolean allInteger = true;
-
-	for (String item : request.getPayload()) {
-
-	    try {
-		Integer.parseInt(item);
-	    } catch (NumberFormatException e) {
-		allInteger = false;
-		break;
-	    }
+	@Bean(name = "clientSetInput")
+	public MessageChannel clientSetInput() {
+		return new DirectChannel();
 	}
 
-	return allInteger;
-    }
+	@Filter(inputChannel = "clientSetInput", outputChannel = "clientSplitterInput", discardChannel = "errorClientChannel", throwExceptionOnRejection = "true")
+	public Boolean verify(Message<List<String>> request) {
+		return baseFilterRequest(request);
+	}
 
 }
