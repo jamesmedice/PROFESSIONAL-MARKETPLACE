@@ -9,7 +9,7 @@ import org.springframework.integration.channel.DirectChannel;
 import org.springframework.messaging.Message;
 import org.springframework.messaging.MessageChannel;
 
-import com.it.gft.global.message.component.client.BaseFilter;
+import com.it.gft.global.message.component.BaseFilter;
 
 @MessageEndpoint
 public class EmployeeFilter extends BaseFilter {

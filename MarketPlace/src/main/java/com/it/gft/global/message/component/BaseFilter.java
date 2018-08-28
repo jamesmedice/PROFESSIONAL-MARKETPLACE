@@ -6,7 +6,7 @@ import org.springframework.messaging.Message;
 
 public abstract class BaseFilter {
 
-	Boolean baseFilterRequest(Message<List<String>> request) {
+	protected Boolean baseFilterRequest(Message<List<String>> request) {
 		Boolean allInteger = true;
 
 		for (String item : request.getPayload()) {
