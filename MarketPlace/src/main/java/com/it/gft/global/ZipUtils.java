@@ -25,7 +25,7 @@ public class ZipUtils {
 		response.setContentType(APPLICATION_ZIP);
 
 		ZipOutputStream zippedOut = null;
-		
+
 		try {
 			zippedOut = new ZipOutputStream(response.getOutputStream());
 			zippedOut.putNextEntry(zipEntry);
@@ -37,6 +37,7 @@ public class ZipUtils {
 		} catch (Exception x) {
 			throw x;
 		} finally {
+			
 			zippedOut.finish();
 			zippedOut.flush();
 
