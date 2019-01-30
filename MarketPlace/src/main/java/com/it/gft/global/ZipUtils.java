@@ -33,6 +33,7 @@ public class ZipUtils {
 			StreamUtils.copy(is, zippedOut);
 
 			response.getOutputStream().flush();
+			
 		} catch (Exception x) {
 			throw x;
 		} finally {
