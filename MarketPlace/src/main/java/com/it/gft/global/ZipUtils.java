@@ -32,14 +32,13 @@ public class ZipUtils {
 			InputStream is = new ByteArrayInputStream(bytesFileZip);
 			StreamUtils.copy(is, zippedOut);
 
+			zippedOut.finish();
+			zippedOut.flush();
 			response.getOutputStream().flush();
-			
+
 		} catch (Exception x) {
 			throw x;
 		} finally {
-			
-			zippedOut.finish();
-			zippedOut.flush();
 
 			response.getOutputStream().close();
 		}
