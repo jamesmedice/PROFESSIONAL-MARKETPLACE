@@ -11,7 +11,7 @@ import org.springframework.context.annotation.ComponentScan;
 /**
  * 
  * @author a73s
- * @author MEDICI
+ * @author TIAGO P MEDICI
  *
  */
 @ComponentScan(basePackages = { "com.it.gft.global" })
