@@ -23,7 +23,7 @@ public class ZipUtils {
 
 	public static final String APPLICATION_ZIP = "application/zip";
 
-	public static void setZipResponse(HttpServletResponse response, byte[] bytesFileZip, ZipEntry zipEntry, String fileName) throws Exception {
+	public static void setZipResponse(HttpServletResponse response, byte[] bytesFileZip, ZipEntry zipEntry, String fileName) {
 		if (bytesFileZip == null || bytesFileZip.length == 0 || StringUtils.isEmpty(fileName))
 			return;
 
@@ -39,11 +39,11 @@ public class ZipUtils {
 			zippedOut.finish();
 			zippedOut.flush();
 			response.getOutputStream().flush();
+			response.getOutputStream().close();
 
 		} catch (Exception x) {
 			LOGGER.error(x);
 		} finally {
-			response.getOutputStream().close();
 		}
 	}
 
