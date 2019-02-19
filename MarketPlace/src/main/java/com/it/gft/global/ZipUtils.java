@@ -19,7 +19,7 @@ import org.springframework.util.StringUtils;
  */
 public class ZipUtils {
 
-	private static final transient Log LOGGER = LogFactory.getLog(ZipUtils.class);
+	private static final Log LOGGER = LogFactory.getLog(ZipUtils.class);
 
 	public static final String APPLICATION_ZIP = "application/zip";
 
