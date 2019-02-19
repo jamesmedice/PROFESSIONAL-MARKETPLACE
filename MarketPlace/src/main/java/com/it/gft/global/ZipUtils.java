@@ -5,26 +5,27 @@ import java.io.InputStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.util.StreamUtils;
 import org.springframework.util.StringUtils;
 
-import javax.servlet.http.HttpServletResponse;
 /**
  * 
  * @author a73s
  *
  */
 public class ZipUtils {
-	
+
+	private static final transient Log LOGGER = LogFactory.getLog(ZipUtils.class);
 
 	public static final String APPLICATION_ZIP = "application/zip";
-		
-	public static void setZipResponse(HttpServletResponse response, byte[] bytesFileZip, ZipEntry zipEntry, String fileName) throws Exception {
-		if (bytesFileZip == null || bytesFileZip.length == 0)
-			throw new Exception("The parameter bytesFileZip is empty");
 
-		if (StringUtils.isEmpty(fileName))
-			throw new Exception("The parameter fileName is null");
+	public static void setZipResponse(HttpServletResponse response, byte[] bytesFileZip, ZipEntry zipEntry, String fileName) throws Exception {
+		if (bytesFileZip == null || bytesFileZip.length == 0 || StringUtils.isEmpty(fileName))
+			return;
 
 		response.setHeader("Content-Disposition", "attachment; filename=" + fileName);
 		response.setContentType(APPLICATION_ZIP);
@@ -40,7 +41,7 @@ public class ZipUtils {
 			response.getOutputStream().flush();
 
 		} catch (Exception x) {
-			throw x;
+			LOGGER.error(x);
 		} finally {
 			response.getOutputStream().close();
 		}
