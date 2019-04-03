@@ -19,6 +19,10 @@ import org.springframework.util.StringUtils;
  */
 public class ZipUtils {
 
+	private static final String ATTACHMENT_FILENAME = "attachment; filename=";
+
+	private static final String CONTENT_DISPOSITION = "Content-Disposition";
+
 	private static final Log LOGGER = LogFactory.getLog(ZipUtils.class);
 
 	public static final String APPLICATION_ZIP = "application/zip";
@@ -27,7 +31,7 @@ public class ZipUtils {
 		if (bytesFileZip == null || bytesFileZip.length == 0 || StringUtils.isEmpty(fileName))
 			return;
 
-		response.setHeader("Content-Disposition", "attachment; filename=" + fileName);
+		response.setHeader(CONTENT_DISPOSITION, ATTACHMENT_FILENAME + fileName);
 		response.setContentType(APPLICATION_ZIP);
 
 		try {
