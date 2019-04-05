@@ -1,4 +1,4 @@
-package com.it.gft.global;
+package com.it.gft.global.utils;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
