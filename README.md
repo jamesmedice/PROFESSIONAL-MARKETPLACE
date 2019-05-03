@@ -10,6 +10,7 @@ Installation
 As it is a maven project there is no need to install a particular plugin, you  only need a mysql 5.7 version to run it.
 
 
+JAVA VERSION 1.8
 
 
 
