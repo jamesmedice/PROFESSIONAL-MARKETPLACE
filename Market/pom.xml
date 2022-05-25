@@ -13,7 +13,7 @@
 	<properties>
 		<maven-compiler-plugin-version>3.1</maven-compiler-plugin-version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.framework.version>4.3.5.RELEASE</spring.framework.version>
+		<spring.framework.version>5.2.22.RELEASE</spring.framework.version>
 		<hibernate.version>5.1.0.Final</hibernate.version>
 		<jackson>2.8.5</jackson>
 	</properties>
